@@ -1,6 +1,7 @@
 'use client';
 
-import { useServiceModal } from '@/lib/states';
+import { useServiceCardHover, useServiceModal } from '@/lib/states';
+import { AnimatePresence, motion } from 'framer-motion';
 import ServiceCardModal from './ServiceCardModal';
 
 export default function ServiceCard({ id, title, description }: { id: string; title: string; description: string }) {
@@ -15,14 +16,27 @@ export default function ServiceCard({ id, title, description }: { id: string; ti
           <p className="text-gray-700">{description}</p>
         </div>
       </div>
-      {isOpen && <ServiceCardModal id={id} title={title} description={description} />}
+      <AnimatePresence>
+        {isOpen && <ServiceCardModal id={id} title={title} description={description} />}
+      </AnimatePresence>
     </>
   );
 }
 
 export function ServiceCardHover({ title, description }: { title: string; description: string }) {
+  const { isOpen, activeCard, openCard, closeCard } = useServiceCardHover();
+
+  function handleClick() {
+    isOpen ? closeCard() : openCard(title, description);
+  }
   return (
-    <div className="group aspect-square w-full hover:cursor-pointer">
+    <motion.div
+      className={`group aspect-square w-full hover:cursor-pointer`}
+      onClick={handleClick}
+      initial={{ x: 0 }}
+      animate={isOpen ? { x: '-100vw' } : { x: 0 }}
+      transition={{ duration: 1, ease: 'easeInOut' }}
+    >
       <div className="group relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg border border-black bg-white p-4 transition-all duration-300 ease-in-out">
         <div className="absolute inset-0 z-0 h-full w-full rounded-lg opacity-0 backdrop-blur-sm transition-all duration-300 ease-in-out group-hover:opacity-100" />
         <h2 className="text-2xl font-bold text-black">{title}</h2>
@@ -34,6 +48,6 @@ export function ServiceCardHover({ title, description }: { title: string; descri
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
