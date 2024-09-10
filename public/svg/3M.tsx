@@ -1,16 +1,8 @@
 import { SVGIcon } from '@/lib/types';
-import { cn } from '@/lib/utils';
 
 export default function ThreeM({ size = 120, className }: SVGIcon) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size / 3}
-      viewBox="0 0 300 157.69046"
-      className={cn('text-red-600', className)}
-      style={{ color: 'inherit' }}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height="auto" viewBox="0 0 300 157.69046">
       <defs>
         <clipPath id="a" clipPathUnits="userSpaceOnUse">
           <path d="M0 0h603v783H0V0Z" />
