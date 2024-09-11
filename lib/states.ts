@@ -25,12 +25,28 @@ type ServiceCardHoverStore = {
 export const useServiceCardHover = create<ServiceCardHoverStore>((set) => ({
   isOpen: false,
   activeCard: null,
-  openCard: (title, description) => set(() => ({ 
-    isOpen: true, 
-    activeCard: { title, description } 
-  })),
-  closeCard: () => set(() => ({ 
-    isOpen: false, 
-    activeCard: null 
-  })),
+  openCard: (title, description) =>
+    set(() => ({
+      isOpen: true,
+      activeCard: { title, description },
+    })),
+  closeCard: () =>
+    set(() => ({
+      isOpen: false,
+      activeCard: null,
+    })),
+}));
+export const useServiceCardHover2 = create<ServiceCardHoverStore>((set) => ({
+  isOpen: false,
+  activeCard: null,
+  openCard: (title, description) =>
+    set(() => ({
+      isOpen: true,
+      activeCard: { title, description },
+    })),
+  closeCard: () =>
+    set(() => ({
+      isOpen: false,
+      activeCard: null,
+    })),
 }));

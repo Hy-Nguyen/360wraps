@@ -1,8 +1,8 @@
 'use client';
 import { useServiceCardHover } from '@/lib/states';
 import { motion } from 'framer-motion';
-import ServiceCard, { ServiceCardHover } from '../services/ServiceCard';
-import ServiceCardDisplay from '../services/ServiceCardDisplay';
+import ServiceCard, { ServiceCardHover, ServiceCardHover2 } from '../services/ServiceCard';
+import ServiceCardDisplay, { ServiceCardDisplay2 } from '../services/ServiceCardDisplay';
 
 export default function Services() {
   const servicesOffered = [
@@ -42,13 +42,22 @@ export default function Services() {
         ))}
       </div>{' '}
       <h1 className="text-4xl font-bold">Services</h1>
-      <motion.div className="flex flex-row overflow-x-hidden">
+      <motion.div className="flex flex-row overflow-visible">
         <div className="grid min-w-full grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
           {servicesOffered.map((service, index) => (
             <ServiceCardHover key={index} title={service.title} description={service.description} />
           ))}
         </div>
         <ServiceCardDisplay />
+      </motion.div>
+      <h1 className="text-4xl font-bold">Services</h1>
+      <motion.div className="flex flex-row overflow-visible">
+        <div className="grid min-w-full grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+          {servicesOffered.map((service, index) => (
+            <ServiceCardHover2 key={index} title={service.title} description={service.description} />
+          ))}
+        </div>
+        <ServiceCardDisplay2 />
       </motion.div>
     </div>
   );
