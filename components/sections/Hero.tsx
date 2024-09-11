@@ -19,10 +19,10 @@ export default function Hero() {
         </p>
       </div>
       <div className="z-0 mx-24 flex w-1/2 flex-col gap-6">
-        <button className="w-1/3 rounded-full bg-white px-4 py-2 text-black transition-all duration-500 ease-in-out hover:scale-105 hover:bg-gray-300">
+        <button className="w-fit rounded-full bg-white px-4 px-6 py-2 text-black transition-all duration-500 ease-in-out hover:scale-105 hover:bg-gray-300">
           Learn More
         </button>
-        <button className="w-1/3 rounded-full bg-white px-4 py-2 text-black transition-all duration-500 ease-in-out hover:scale-105 hover:bg-gray-300">
+        <button className="w-fit rounded-full bg-white px-4 px-6 py-2 text-black transition-all duration-500 ease-in-out hover:scale-105 hover:bg-gray-300">
           Contact Us
         </button>
       </div>
