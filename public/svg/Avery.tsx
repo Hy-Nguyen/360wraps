@@ -1,5 +1,4 @@
 import { SVGIcon } from '@/lib/types';
-import { cn } from '@/lib/utils';
 
 export default function Avery({ size = 40, className }: SVGIcon) {
   return (

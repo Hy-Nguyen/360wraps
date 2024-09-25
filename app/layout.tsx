@@ -6,8 +6,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: '360 AZ Wraps',
-  description: '360 AZ Wraps',
+  title: '360 Auto Concepts',
+  description: '360 Auto Concepts',
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + 'max-w-[100dvw] overflow-x-hidden bg-black'}>
+      <body className={inter.className + 'max-w-[100dvw] overflow-x-hidden bg-white lg:max-w-[100vw]'}>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

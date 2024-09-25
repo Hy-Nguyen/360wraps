@@ -14,11 +14,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`invert-text fixed left-0 top-0 z-30 flex h-14 w-screen max-w-[100dvw] items-center justify-center rounded-b-2xl px-4 text-black bg-white/25 backdrop-blur-lg`}
+      className={`${isOpen ? 'bg-white' : 'bg-white/25'} invert-text fixed left-0 top-0 z-30 flex h-14 w-screen max-w-[100dvw] items-center justify-center px-4 text-black backdrop-blur-lg lg:rounded-b-2xl`}
     >
       <div className="container flex w-full items-center justify-between px-0 lg:px-8">
         <h1 className="text-2xl font-bold hover:cursor-pointer lg:text-4xl" onClick={() => scrollToSection('hero')}>
-          360 AZ Wraps
+          360 Auto Concepts
         </h1>
 
         <div className="hidden items-center justify-center gap-8 lg:flex">

@@ -1,10 +1,9 @@
 import { SVGIcon } from '@/lib/types';
-import { cn } from '@/lib/utils';
 
 export default function Icon({ size = 120, className }: SVGIcon) {
   return (
-    <svg width={size} height="auto" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_513_927)">
+    <svg width={size} height={32} viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clipPath="url(#clip0_513_927)">
         <path
           d="M60.7233 17.6006H55.0089V12.6183H71.9081V17.6006H66.1938V47.5011H60.7268V17.6006H60.7233Z"
           fill="#292929"

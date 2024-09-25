@@ -31,7 +31,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p className="text-sm text-gray-400 lg:hidden">Copyright 2024 &copy; 360 Auto Concepts</p>
+        <p className="text-sm text-gray-400 lg:hidden">&copy; Copyright 2024 360 Auto Concepts</p>
       </div>
     </footer>
   );

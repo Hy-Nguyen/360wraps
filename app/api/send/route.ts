@@ -11,23 +11,23 @@ export async function POST(req: Request) {
     console.log(formData);
     const { data, error } = await resend.batch.send([
       {
-        from: '360 Auto Concepts <contact@hy-nguyen.com>',
+        from: '360 Auto Concepts <contact@360autoconcepts.com>',
         to: [formData.email],
         subject: 'Message Confirmation',
         react: CustomerConfirmation({ ...formData }),
       },
       {
-        from: '360 Auto Concepts <contact@hy-nguyen.com>',
+        from: '360 Auto Concepts <contact@360autoconcepts.com>',
         to: ['giahy316@gmail.com'],
         subject: 'New Business Inquiry',
         react: BusinessNotification({ ...formData }),
       },
-      {
-        from: '360 Auto Concepts <contact@hy-nguyen.com>',
-        to: ['autoconcepts360@gmail.com'],
-        subject: 'New Business Inquiry',
-        react: BusinessNotification({ ...formData }),
-      },
+      // {
+      //   from: '360 Auto Concepts <contact@360autoconcepts.com>',
+      //   to: ['autoconcepts360@gmail.com'],
+      //   subject: 'New Business Inquiry',
+      //   react: BusinessNotification({ ...formData }),
+      // },
     ]);
     if (error) {
       console.log(error);

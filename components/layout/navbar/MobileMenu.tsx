@@ -13,7 +13,7 @@ export default function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean)
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}
-      className="fixed left-0 top-14 flex h-screen w-screen flex-col items-center justify-center gap-10 bg-white text-black backdrop-blur-sm"
+      className="fixed left-0 top-14 flex h-[calc(100dvh-3.5rem)] w-screen flex-col items-center justify-center gap-10 bg-white text-black backdrop-blur-sm"
     >
       <NavLink
         scrollTo={() => {

@@ -33,22 +33,22 @@ export default function MenuButton({
       <motion.path
         d="M2 4H22"
         stroke="#000"
-        stroke-width="3"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeLinecap="round"
         animate={isOpen ? { rotate: 45, translateY: '45%' } : { rotate: 0, translateY: 0 }}
       />
       <motion.path
         d="M2 12H22"
         stroke="#000"
-        stroke-width="3"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeLinecap="round"
         animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
       />
       <motion.path
         d="M2 20H22"
         stroke="#000"
-        stroke-width="3"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeLinecap="round"
         animate={isOpen ? { rotate: -45, translateY: '-25%' } : { rotate: 0, translateY: 0 }}
       />
     </motion.svg>
