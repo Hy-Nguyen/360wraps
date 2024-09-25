@@ -60,7 +60,7 @@ export default function Services() {
       image: SampleImage,
     },
     {
-      title: 'Tinting - Coming Soon',
+      title: 'Tinting ',
       description: 'Enhance privacy and reduce heat with professional window tinting.',
       longDescription: [
         'Our Tinting service offers a range of tint levels to suit your privacy and aesthetic preferences.',
@@ -77,7 +77,7 @@ export default function Services() {
       className="container flex flex-col items-center justify-center gap-10 px-4 py-10 lg:px-8"
     >
       <h1 className="text-4xl font-bold">Services</h1>
-      <div className="grid w-full grid-cols-2 gap-6 lg:grid-cols-3 lg:gap-20">
+      <div className="grid w-full grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-20">
         {servicesOffered.map((service, index) => (
           <ServiceCard id={service.title} key={index} {...service} />
         ))}
