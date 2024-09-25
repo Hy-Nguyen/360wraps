@@ -138,19 +138,21 @@ export default function ContactForm() {
           placeholder="Service"
           error={errors.service}
         />
-        <div className="relative">
-          <textarea
-            name="message"
-            id="message"
-            value={formData.message}
-            maxLength={MAX_MESSAGE_LENGTH}
-            onChange={handleChange}
-            className="no-ring h-[8lh] w-full resize-none rounded-md border border-gray-400 bg-white/80 p-4 transition-colors duration-300 ease-in-out focus-visible:border-main-500"
-            placeholder="Give us a brief description of your project and your budget!"
-          ></textarea>
-          <p className="absolute bottom-4 right-4 text-gray-400">
-            {formData.message.length} / {MAX_MESSAGE_LENGTH}
-          </p>
+        <div>
+          <div className="relative">
+            <textarea
+              name="message"
+              id="message"
+              value={formData.message}
+              maxLength={MAX_MESSAGE_LENGTH}
+              onChange={handleChange}
+              className="no-ring h-[8lh] w-full resize-none rounded-md border border-gray-400 bg-white/80 p-4 transition-colors duration-300 ease-in-out focus-visible:border-main-500"
+              placeholder="Give us a brief description of your project and your budget!"
+            ></textarea>
+            <p className="absolute bottom-4 right-4 text-gray-400">
+              {formData.message.length} / {MAX_MESSAGE_LENGTH}
+            </p>
+          </div>
           {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
         </div>
         <button
