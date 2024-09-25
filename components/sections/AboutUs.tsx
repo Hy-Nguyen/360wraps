@@ -1,11 +1,19 @@
+import AlexWrap from '@/public/img/Alex_Tesla.jpg';
+import Image from 'next/image';
+
 export default function AboutUs() {
   return (
     <section id="about" className="flex min-h-screen w-screen flex-col items-center justify-center text-black">
-      <div className="container flex flex-row gap-16 bg-[#f8f8ff] py-8">
-        <div className="w-1/2">
-          <div className="aspect-square h-full w-auto rounded-xl bg-black" />
+      <div className="container flex flex-col gap-8 bg-[#f8f8ff] px-6 py-8 lg:flex-row lg:gap-16 lg:px-8">
+        <div className="w-full lg:w-1/2">
+          {/* <div className="aspect-square h-auto w-full rounded-xl bg-black" /> */}
+          <Image
+            src={AlexWrap}
+            alt="Tesla Model S Matte Black"
+            className="aspect-square h-auto w-full rounded-xl border-4 border-black object-cover"
+          />
         </div>
-        <div className="flex w-1/2 flex-col gap-12">
+        <div className="flex w-full flex-col gap-6 lg:w-1/2 lg:gap-12">
           <h1 className="text-4xl font-bold">About Us</h1>
           <p className="text-xl font-light">
             At 360 Auto Concepts, we specialize in delivering high-quality car wraps and automotive services with

@@ -1,18 +1,27 @@
 'use client';
 
-import Instagram from '@/public/svg/Instagram';
-import TikTok from '@/public/svg/TikTok';
 import { scrollToSection } from '@/lib/utils';
+import Instagram from '@/public/svg/Instagram';
+import MenuButton from '@/public/svg/MenuButton';
+import TikTok from '@/public/svg/TikTok';
+import { AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import MobileMenu from './navbar/MobileMenu';
+import NavLink from './navbar/NavLink';
+import NavSocial from './navbar/NavSocial';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="invert-text fixed left-0 top-0 z-30 flex h-14 w-screen max-w-[100dvw] items-center justify-center bg-transparent px-4 text-black backdrop-blur-sm">
-      <div className="container flex w-full items-center justify-between">
-        <h1 className="text-4xl font-bold hover:cursor-pointer" onClick={() => scrollToSection('hero')}>
+    <div
+      className={`invert-text fixed left-0 top-0 z-30 flex h-14 w-screen max-w-[100dvw] items-center justify-center bg-black bg-transparent px-4 text-black backdrop-blur-lg`}
+    >
+      <div className="container flex w-full items-center justify-between px-0 lg:px-8">
+        <h1 className="text-2xl font-bold hover:cursor-pointer lg:text-4xl" onClick={() => scrollToSection('hero')}>
           360 AZ Wraps
         </h1>
 
-        <div className="flex items-center justify-center gap-8">
+        <div className="hidden items-center justify-center gap-8 lg:flex">
           <NavLink scrollTo={() => scrollToSection('about', -56)} label="About" />
           <NavLink scrollTo={() => scrollToSection('services')} label="Services" />
           <NavLink scrollTo={() => scrollToSection('gallery', -56)} label="Gallery" />
@@ -20,31 +29,11 @@ export default function Navbar() {
           <NavSocial link="https://www.instagram.com/360azwraps/" icon={<Instagram />} />
           <NavSocial link="https://www.tiktok.com/@kehvan" icon={<TikTok />} />
         </div>
+        <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <MenuButton isOpen={isOpen} />
+        </div>
+        <AnimatePresence>{isOpen && <MobileMenu setIsOpen={setIsOpen} />}</AnimatePresence>
       </div>
-    </div>
-  );
-}
-function NavSocial({ link, icon }: { link: string; icon: React.ReactNode }) {
-  return (
-    <div className="group/navsocial relative w-fit text-lg">
-      <a href={link}>{icon}</a>
-    </div>
-  );
-}
-
-function NavLink({ scrollTo, label }: { scrollTo: () => void; label: string }) {
-  return (
-    <div className="group/navlink relative w-fit text-lg">
-      <button className="" onClick={scrollTo}>
-        {label}
-      </button>
-      <button
-        className="absolute left-0 top-0 h-full w-full underline underline-offset-4 opacity-0 transition-opacity duration-300 ease-in-out group-hover/navlink:opacity-100"
-        aria-hidden
-        onClick={scrollTo}
-      >
-        {label}
-      </button>
     </div>
   );
 }

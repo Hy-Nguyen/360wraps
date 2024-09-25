@@ -1,14 +1,14 @@
 'use client';
 
+import { MAX_MESSAGE_LENGTH } from '@/lib/constants';
 import { ContactFormData, contactFormSchema } from '@/lib/schema';
-import { z } from 'zod';
 import SampleFormImage from '@/public/img/samplewraps/wrap4.png';
+import { format, toZonedTime } from 'date-fns-tz';
 import Image from 'next/image';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import { z } from 'zod';
 import FormInput from './FormInput';
-import { MAX_MESSAGE_LENGTH } from '@/lib/constants';
-import { format, toZonedTime } from 'date-fns-tz';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -81,18 +81,38 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="flex h-full w-full gap-6 rounded-lg border-2 border-gray-400 p-6">
-      <div className="relative flex aspect-square w-1/2 grow flex-col gap-4 overflow-hidden rounded-lg bg-black">
-        <Image src={SampleFormImage} alt="360 AZ Wraps" className="h-full w-full object-cover" />
+    <div className="flex h-full w-full flex-col gap-6 rounded-lg border-gray-400 lg:flex-row lg:gap-8 lg:border-2 lg:p-8">
+      <div className="flex flex-col gap-2 lg:hidden">
+        <h1 className="text-4xl font-semibold">Send Us a Message!</h1>
+        <p className="text-gray-500">We will get back to you as soon as possible.</p>
+      </div>
+      <div className="relative flex aspect-square w-full grow flex-col gap-4 overflow-hidden rounded-lg bg-black lg:w-1/2">
+        <Image src={SampleFormImage} alt="360 Auto Concepts" className="h-full w-full object-cover" />
         <div className="absolute bottom-0 left-0 flex h-fit w-full flex-col items-start justify-start bg-gradient-to-t from-black/75 to-transparent px-4 py-2 text-white backdrop-blur-sm">
-          <h1 className="text-2xl font-bold">360 AZ Wraps</h1>
-          <p className="text-gray-300">Open Monday - Friday</p>
-          <p className="text-gray-300">10:00 AM - 6:00 PM</p>
+          <h1 className="text-2xl font-bold">360 Auto Concepts</h1>
+          <p className="text-gray-300">Available Monday - Friday - 10:00 AM - 6:00 PM</p>
+          <p className="text-gray-300">
+            Email:{' '}
+            <a className="underline underline-offset-2" href="mailto:autoconcepts360@gmail.com">
+              autoconcepts360@gmail.com
+            </a>
+          </p>
+          <p className="text-gray-300">
+            Phone:{' '}
+            <a className="underline underline-offset-2" href="tel:623-204-4500">
+              623-204-4500
+            </a>
+          </p>
         </div>
       </div>
-      <form onSubmit={handleSubmit} className="flex w-1/2 flex-col justify-evenly rounded-lg">
-        <h1 className="text-4xl font-semibold">Contact Us!</h1>
-        <p className="text-gray-500">We will get back to you as soon as possible.</p>
+      <form
+        onSubmit={handleSubmit}
+        className="flex w-full flex-col gap-4 rounded-lg lg:w-1/2 lg:justify-between lg:gap-0"
+      >
+        <div className="hidden flex-col gap-4 lg:flex">
+          <h1 className="text-4xl font-semibold">Send Us a Message!</h1>
+          <p className="text-gray-500">We will get back to you as soon as possible.</p>
+        </div>
         <div className="flex w-full gap-4">
           <FormInput
             id="firstName"

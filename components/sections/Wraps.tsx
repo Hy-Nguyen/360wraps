@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 export default function Wraps() {
   return (
     <section id="services" className="flex w-[100dvw] flex-col items-center justify-center bg-gray-300">
-      <div className="marquee-fade container flex h-full w-full select-none flex-row items-center overflow-x-hidden py-3 md:py-6">
+      <div className="marquee-fade container flex h-full w-full select-none flex-row items-center overflow-x-hidden px-6 py-4 lg:px-8 lg:py-6">
         {/* Scroller Content */}
         <motion.div
           initial={{ x: 0 }}
@@ -16,7 +16,7 @@ export default function Wraps() {
             translateX: `calc(-50% - 4.5rem)`,
           }}
           transition={{
-            duration: 18,
+            duration: 6,
             repeat: Infinity,
             ease: 'linear',
           }}
@@ -35,51 +35,6 @@ export default function Wraps() {
             <TinyBotLogo />
           </div>
           <div className="w-[120px]">
-            <VinylFrog />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <ThreeM />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <Avery />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <CheetahWrap />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <TinyBotLogo />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <VinylFrog />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <ThreeM />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <Avery />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <CheetahWrap />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <TinyBotLogo />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <VinylFrog />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <ThreeM />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <Avery />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <CheetahWrap />
-          </div>
-          <div className="w-[120px]" aria-hidden>
-            <TinyBotLogo />
-          </div>
-          <div className="w-[120px]" aria-hidden>
             <VinylFrog />
           </div>
           <div className="w-[120px]" aria-hidden>

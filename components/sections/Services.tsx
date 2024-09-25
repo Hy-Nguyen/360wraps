@@ -1,6 +1,6 @@
 'use client';
-import ServiceCard from '../services/ServiceCard';
 import SampleImage from '@/public/img/samplewraps/wrap3.png';
+import ServiceCard from '../services/ServiceCard';
 
 export default function Services() {
   const servicesOffered = [
@@ -72,9 +72,12 @@ export default function Services() {
     },
   ];
   return (
-    <section id="servicesBody" className="container flex flex-col items-center justify-center gap-10 px-0 py-10">
+    <section
+      id="servicesBody"
+      className="container flex flex-col items-center justify-center gap-10 px-4 py-10 lg:px-8"
+    >
       <h1 className="text-4xl font-bold">Services</h1>
-      <div className="grid w-full grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid w-full grid-cols-2 gap-6 lg:grid-cols-3 lg:gap-20">
         {servicesOffered.map((service, index) => (
           <ServiceCard id={service.title} key={index} {...service} />
         ))}

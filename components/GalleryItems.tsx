@@ -1,15 +1,16 @@
 import { motion, useTransform } from 'framer-motion';
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function Card(props: any) {
   const [style, setStyle] = useState({});
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 1024) {
         setStyle({ top: `calc(10% + ${props.i * 2}px)` });
       } else {
+        // Desktop
         setStyle({ top: `calc(15% + ${props.i * 25}px)` });
       }
     };
@@ -24,8 +25,8 @@ export default function Card(props: any) {
 
   return (
     <div
-      id={`member-card-${props.i}`}
-      className={`sticky z-10 mx-auto flex h-fit w-full items-center justify-center py-72 sm:h-[25vh]`}
+      id={`gallery-card-${props.i}`}
+      className={`sticky z-10 mx-auto flex h-fit w-full items-center justify-center py-6 lg:h-[25vh] lg:py-72`}
       style={style}
     >
       <motion.div

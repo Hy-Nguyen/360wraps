@@ -1,5 +1,5 @@
-import CustomerConfirmation from '@/components/Contact/Email/CustomerConfirmation';
 import BusinessNotification from '@/components/Contact/Email/BusinessNotification';
+import CustomerConfirmation from '@/components/Contact/Email/CustomerConfirmation';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
       },
       {
         from: '360 Auto Concepts <contact@hy-nguyen.com>',
-        to: ['giahy316@gmail.com'],
+        to: ['giahy316@gmail.com', 'autoconcepts360@gmail.com'],
         subject: 'New Business Inquiry',
         react: BusinessNotification({ ...formData }),
       },

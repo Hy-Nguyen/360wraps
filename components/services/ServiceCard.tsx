@@ -2,8 +2,8 @@
 
 import { useServiceCardHover, useServiceCardHover2, useServiceModal } from '@/lib/states';
 import { AnimatePresence, motion } from 'framer-motion';
-import ServiceCardModal from './ServiceCardModal';
 import { StaticImageData } from 'next/image';
+import ServiceCardModal from './ServiceCardModal';
 
 export default function ServiceCard({
   id,
@@ -24,9 +24,9 @@ export default function ServiceCard({
     <>
       <div className="group relative aspect-square w-full hover:cursor-pointer" onClick={() => openModal(id)}>
         <div className="absolute inset-2 z-0 h-full w-full rounded-lg bg-black" />
-        <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-4 rounded-lg border border-zinc-400 bg-white p-4 transition-all duration-300 ease-in-out group-hover:-translate-x-4 group-hover:-translate-y-4">
-          <h2 className="text-3xl font-bold text-black">{title}</h2>
-          <p className="w-3/4 text-center text-gray-500">{description}</p>
+        <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-2 rounded-lg border border-zinc-400 bg-white p-4 transition-all duration-300 ease-in-out group-hover:-translate-x-4 group-hover:-translate-y-4 lg:gap-4">
+          <h2 className="text-center text-2xl font-bold text-black lg:text-3xl">{title}</h2>
+          <p className="textbase w-5/6 text-center text-sm text-gray-500 lg:w-3/4 lg:text-base">{description}</p>
         </div>
       </div>
       <AnimatePresence>
