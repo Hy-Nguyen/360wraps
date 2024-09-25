@@ -79,11 +79,6 @@
   mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 }
 
-.invert-text {
-  color: white;
-  mix-blend-mode: difference;
-}
 html {
   scroll-behavior: smooth;
-  background-color: #fff;
 }

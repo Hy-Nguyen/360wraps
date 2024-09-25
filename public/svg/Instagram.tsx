@@ -8,7 +8,7 @@ export default function Instagram({ size = '1em', className }: { size?: number |
       height={size}
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 256 256"
-      className={cn('text-white', className)}
+      className={cn('text-black', className)}
     >
       <path
         fill="currentColor"

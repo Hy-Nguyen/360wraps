@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`invert-text fixed left-0 top-0 z-30 flex h-14 w-screen max-w-[100dvw] items-center justify-center bg-black bg-transparent px-4 text-black backdrop-blur-lg`}
+      className={`invert-text fixed left-0 top-0 z-30 flex h-14 w-screen max-w-[100dvw] items-center justify-center rounded-b-2xl px-4 text-black bg-white/25 backdrop-blur-lg`}
     >
       <div className="container flex w-full items-center justify-between px-0 lg:px-8">
         <h1 className="text-2xl font-bold hover:cursor-pointer lg:text-4xl" onClick={() => scrollToSection('hero')}>

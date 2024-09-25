@@ -7,7 +7,7 @@ const TikTok = ({ size = '1em', className }: { size?: number | string; className
     viewBox="0 0 256 290"
     width={size}
     height={size}
-    className={cn('text-white', className)}
+    className={cn('text-black', className)}
   >
     <path
       fill="#FF004F"
