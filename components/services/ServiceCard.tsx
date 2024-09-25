@@ -3,21 +3,42 @@
 import { useServiceCardHover, useServiceCardHover2, useServiceModal } from '@/lib/states';
 import { AnimatePresence, motion } from 'framer-motion';
 import ServiceCardModal from './ServiceCardModal';
+import { StaticImageData } from 'next/image';
 
-export default function ServiceCard({ id, title, description }: { id: string; title: string; description: string }) {
-  const { openModals, openModal, closeModal } = useServiceModal();
+export default function ServiceCard({
+  id,
+  title,
+  description,
+  longDescription,
+  image,
+}: {
+  id: string;
+  title: string;
+  description: string;
+  longDescription: string[];
+  image: StaticImageData;
+}) {
+  const { openModals, openModal } = useServiceModal();
   const isOpen = openModals[id] || false;
   return (
     <>
       <div className="group relative aspect-square w-full hover:cursor-pointer" onClick={() => openModal(id)}>
         <div className="absolute inset-2 z-0 h-full w-full rounded-lg bg-black" />
-        <div className="relative z-10 flex h-full w-full flex-col items-center justify-center rounded-lg border border-black bg-white p-4 transition-all duration-300 ease-in-out group-hover:-translate-x-4 group-hover:-translate-y-4">
-          <h2 className="text-2xl font-bold text-black">{title}</h2>
-          <p className="text-gray-700">{description}</p>
+        <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-4 rounded-lg border border-zinc-400 bg-white p-4 transition-all duration-300 ease-in-out group-hover:-translate-x-4 group-hover:-translate-y-4">
+          <h2 className="text-3xl font-bold text-black">{title}</h2>
+          <p className="w-3/4 text-center text-gray-500">{description}</p>
         </div>
       </div>
       <AnimatePresence>
-        {isOpen && <ServiceCardModal id={id} title={title} description={description} />}
+        {isOpen && (
+          <ServiceCardModal
+            id={id}
+            title={title}
+            description={description}
+            longDescription={longDescription}
+            image={image}
+          />
+        )}
       </AnimatePresence>
     </>
   );

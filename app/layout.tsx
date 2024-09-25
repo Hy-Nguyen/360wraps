@@ -2,6 +2,7 @@ import LayoutWrapper from '@/components/layout/LayoutWrapper';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Navbar from '@/components/layout/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + 'max-w-[100dvw] overflow-x-hidden'}>
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <LayoutWrapper>
+          <Navbar />
+          {children}
+        </LayoutWrapper>
       </body>
     </html>
   );

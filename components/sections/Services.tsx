@@ -1,64 +1,84 @@
 'use client';
-import { useServiceCardHover } from '@/lib/states';
-import { motion } from 'framer-motion';
-import ServiceCard, { ServiceCardHover, ServiceCardHover2 } from '../services/ServiceCard';
-import ServiceCardDisplay, { ServiceCardDisplay2 } from '../services/ServiceCardDisplay';
+import ServiceCard from '../services/ServiceCard';
+import SampleImage from '@/public/img/samplewraps/wrap3.png';
 
 export default function Services() {
   const servicesOffered = [
     {
       title: 'Full Wraps',
-      description: 'We offer a wide range of wraps for your vehicle.',
+      description: 'Transform your vehicle with a complete color change.',
+      longDescription: [
+        "Our Full Wrap service offers a complete transformation of your vehicle's appearance.",
+        'Choose from a wide range of colors and finishes to match your style.',
+        'Protects the original paint from scratches, UV rays, and other environmental damage.',
+        'Easily removable, allowing you to revert to the original paint or change colors as desired.',
+      ],
+      image: SampleImage,
     },
     {
       title: 'Partial Wraps',
-      description: 'We offer a wide range of wraps for your vehicle.',
+      description: 'Customize specific parts of your vehicle for a unique look.',
+      longDescription: [
+        'Our Partial Wrap service allows you to highlight specific areas of your vehicle.',
+        'Perfect for adding accents, logos, or unique designs to your car.',
+        'Cost-effective way to achieve a custom look without a full wrap.',
+        'Available for hoods, roofs, mirrors, and other sections of your vehicle.',
+      ],
+      image: SampleImage,
     },
     {
       title: 'Chrome Deletes',
-      description: 'We offer a wide range of wraps for your vehicle.',
+      description: 'Give your vehicle a sleek, modern look by removing chrome accents.',
+      longDescription: [
+        'Chrome Deletes service provides a stylish and contemporary appearance by eliminating chrome accents.',
+        'Ideal for achieving a stealthy, monochromatic look.',
+        'Uses high-quality vinyl to cover chrome trims, emblems, and grilles.',
+        'Enhances the overall aesthetic without permanent modifications.',
+      ],
+      image: SampleImage,
     },
     {
       title: 'Ceramic Coating',
-      description: 'We offer a wide range of wraps for your vehicle.',
+      description: 'Protect your vehicle with a durable, high-gloss ceramic coating.',
+      longDescription: [
+        "Our Ceramic Coating service offers long-lasting protection for your vehicle's paint.",
+        'Creates a hydrophobic surface that repels water, dirt, and contaminants.',
+        "Enhances the shine and depth of your vehicle's color.",
+        'Reduces maintenance time and effort with its easy-to-clean properties.',
+      ],
+      image: SampleImage,
     },
     {
       title: 'Detailing',
-      description: 'We offer a wide range of wraps for your vehicle.',
+      description: 'Keep your vehicle in pristine condition with our comprehensive detailing services.',
+      longDescription: [
+        'Our Detailing service ensures your vehicle looks its best inside and out.',
+        'Includes thorough cleaning, polishing, and protection for both the interior and exterior.',
+        "Removes dirt, grime, and minor imperfections to restore your vehicle's original beauty.",
+        'Tailored packages available to meet your specific needs and preferences.',
+      ],
+      image: SampleImage,
     },
     {
       title: 'Tinting - Coming Soon',
-      description: 'We offer a wide range of wraps for your vehicle.',
+      description: 'Enhance privacy and reduce heat with professional window tinting.',
+      longDescription: [
+        'Our Tinting service offers a range of tint levels to suit your privacy and aesthetic preferences.',
+        'Reduces glare and heat, making your driving experience more comfortable.',
+        'Protects the interior from UV damage, reducing fading and cracking.',
+        'Professionally installed to ensure a flawless, long-lasting finish.',
+      ],
+      image: SampleImage,
     },
   ];
-  const { isOpen, activeCard, openCard, closeCard } = useServiceCardHover();
-
   return (
-    <div className="container flex flex-col items-center justify-center gap-10 overflow-x-hidden py-10">
+    <section id="servicesBody" className="container flex flex-col items-center justify-center gap-10 px-0 py-10">
       <h1 className="text-4xl font-bold">Services</h1>
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
         {servicesOffered.map((service, index) => (
-          <ServiceCard id={service.title} key={index} title={service.title} description={service.description} />
+          <ServiceCard id={service.title} key={index} {...service} />
         ))}
       </div>{' '}
-      <h1 className="text-4xl font-bold">Services</h1>
-      <motion.div className="flex flex-row overflow-visible">
-        <div className="grid min-w-full grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {servicesOffered.map((service, index) => (
-            <ServiceCardHover key={index} title={service.title} description={service.description} />
-          ))}
-        </div>
-        <ServiceCardDisplay />
-      </motion.div>
-      <h1 className="text-4xl font-bold">Services</h1>
-      <motion.div className="flex flex-row overflow-visible">
-        <div className="grid min-w-full grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {servicesOffered.map((service, index) => (
-            <ServiceCardHover2 key={index} title={service.title} description={service.description} />
-          ))}
-        </div>
-        <ServiceCardDisplay2 />
-      </motion.div>
-    </div>
+    </section>
   );
 }

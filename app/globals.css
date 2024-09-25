@@ -68,7 +68,22 @@
   }
 }
 
+@layer base {
+  .no-ring {
+    @apply focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0;
+  }
+}
+
 .marquee-fade {
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+
+.invert-text {
+  color: white;
+  mix-blend-mode: difference;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: #000;
 }

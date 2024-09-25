@@ -1,4 +1,7 @@
+import Footer from '@/components/layout/Footer';
 import AboutUs from '@/components/sections/AboutUs';
+import ContactUs from '@/components/sections/ContactUs';
+import Gallery from '@/components/sections/Gallery';
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
 import Wraps from '@/components/sections/Wraps';
@@ -10,6 +13,9 @@ export default function Home() {
       <AboutUs />
       <Wraps />
       <Services />
+      <Gallery />
+      <ContactUs />
+      <Footer />
     </main>
   );
 }

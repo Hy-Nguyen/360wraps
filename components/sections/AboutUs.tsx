@@ -1,7 +1,7 @@
 export default function AboutUs() {
   return (
-    <div className="flex min-h-screen w-screen flex-col items-center justify-center text-black">
-      <div className="container flex flex-row gap-12 bg-[#f8f8ff] py-8">
+    <section id="about" className="flex min-h-screen w-screen flex-col items-center justify-center text-black">
+      <div className="container flex flex-row gap-16 bg-[#f8f8ff] py-8">
         <div className="w-1/2">
           <div className="aspect-square h-full w-auto rounded-xl bg-black" />
         </div>
@@ -21,6 +21,6 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
