@@ -18,12 +18,19 @@ export async function POST(req: Request) {
       },
       {
         from: '360 Auto Concepts <contact@hy-nguyen.com>',
-        to: ['giahy316@gmail.com', 'autoconcepts360@gmail.com'],
+        to: ['giahy316@gmail.com'],
+        subject: 'New Business Inquiry',
+        react: BusinessNotification({ ...formData }),
+      },
+      {
+        from: '360 Auto Concepts <contact@hy-nguyen.com>',
+        to: ['autoconcepts360@gmail.com'],
         subject: 'New Business Inquiry',
         react: BusinessNotification({ ...formData }),
       },
     ]);
     if (error) {
+      console.log(error);
       return Response.json({ error }, { status: 500 });
     }
     return Response.json(data);

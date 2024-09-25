@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + 'max-w-[100dvw] overflow-x-hidden'}>
+      <body className={inter.className + 'max-w-[100dvw] overflow-x-hidden bg-white'}>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

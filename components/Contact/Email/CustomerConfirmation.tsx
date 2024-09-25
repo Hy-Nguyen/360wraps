@@ -1,6 +1,5 @@
-import { Body, Container, Head, Heading, Html, Link, Preview, Text } from '@react-email/components';
 import { CustomerConfirmationProps } from '@/lib/types';
-import * as React from 'react';
+import { Body, Container, Head, Heading, Html, Link, Preview, Text } from '@react-email/components';
 
 export default function CustomerConfirmation({
   firstName,
@@ -13,10 +12,10 @@ export default function CustomerConfirmation({
   return (
     <Html>
       <Head />
-      <Preview>We received your message and are working to get back to you!</Preview>
+      <Preview>We will get back to you shortly!</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>Message Received!</Heading>
+          <Heading style={h1}>Thank you for reaching out!</Heading>
           <Text style={{ ...text, marginBottom: '14px' }}>
             Thank you for contacting us! We will get back to you as soon as possible. Please allow 1-3 business days for
             a response.
@@ -43,6 +42,13 @@ export default function CustomerConfirmation({
             <Text style={{ ...text, marginBottom: '14px' }}>Message: </Text>
             <Text style={{ ...text, fontWeight: 'bold' }}>{message}</Text>
           </Container>
+          <Text style={{ ...text, marginBottom: '14px' }}>
+            If you have any questions, please feel free to contact us at{' '}
+            <Link href="mailto:autoconcepts360@gmail.com" style={{ ...link, color: '#898989' }}>
+              autoconcepts360@gmail.com
+            </Link>
+          </Text>
+          <Text style={{ ...text, marginBottom: '14px' }}>Please do not reply to this email.</Text>
           <Text style={footer}>
             <Link href="https://360autoconcepts.com/" target="_blank" style={{ ...link, color: '#898989' }}>
               360 Auto Concepts

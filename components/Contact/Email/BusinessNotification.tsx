@@ -1,6 +1,5 @@
-import { Body, Container, Head, Heading, Html, Img, Link, Preview, Text } from '@react-email/components';
-import * as React from 'react';
 import { BusinessNotificationProps } from '@/lib/types';
+import { Body, Container, Head, Heading, Html, Link, Preview, Text } from '@react-email/components';
 
 export default function BusinessNotification({
   firstName,
@@ -14,7 +13,7 @@ export default function BusinessNotification({
   return (
     <Html>
       <Head />
-      <Preview>New Business Inquiry</Preview>
+      <Preview>You Received a New Business Inquiry</Preview>
       <Body style={main}>
         <Container style={container}>
           <Heading style={h1}>New Business Inquiry</Heading>
