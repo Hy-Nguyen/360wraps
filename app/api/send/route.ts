@@ -22,12 +22,12 @@ export async function POST(req: Request) {
         subject: 'New Business Inquiry',
         react: BusinessNotification({ ...formData }),
       },
-      // {
-      //   from: '360 Auto Concepts <contact@360autoconcepts.com>',
-      //   to: ['autoconcepts360@gmail.com'],
-      //   subject: 'New Business Inquiry',
-      //   react: BusinessNotification({ ...formData }),
-      // },
+      {
+        from: '360 Auto Concepts <contact@360autoconcepts.com>',
+        to: ['autoconcepts360@gmail.com'],
+        subject: 'New Business Inquiry',
+        react: BusinessNotification({ ...formData }),
+      },
     ]);
     if (error) {
       console.log(error);
