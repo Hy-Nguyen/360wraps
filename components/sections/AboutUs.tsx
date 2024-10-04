@@ -5,7 +5,7 @@ import { scrollToSection } from '@/lib/utils';
 
 export default function AboutUs() {
   return (
-    <section id="about" className="flex h-fit w-screen flex-col items-center justify-center py-32 text-black">
+    <section id="about" className="flex h-fit w-screen flex-col items-center justify-center xl:py-32 text-black">
       <div className="container flex flex-col gap-8 bg-[#f8f8ff] px-6 py-8 lg:flex-row lg:gap-16 lg:px-8">
         <div className="w-full lg:w-1/2">
           {/* <div className="aspect-square h-auto w-full rounded-xl bg-black" /> */}
