@@ -16,11 +16,11 @@ export default function Hero() {
         className="absolute left-1/2 h-full w-[100dvw] -translate-x-1/2 object-cover"
       />
 
-      <div className="absolute bottom-0 left-0 z-0 flex h-fit w-full flex-col gap-6 bg-black/70 px-4 py-4 text-white backdrop-blur-sm lg:bottom-10 lg:w-fit lg:px-6">
+      <div className="absolute bottom-0 left-0 z-0 flex h-fit w-full flex-col gap-6 bg-black/50 px-4 py-4 text-white backdrop-blur-sm lg:bottom-10 lg:w-fit lg:px-6">
         <div className="flex w-fit flex-col gap-4 border-l-[6px] border-white pl-4 lg:gap-6 lg:border-l-8">
           <h1 className="w-fit text-4xl font-bold text-white lg:text-5xl">Elevate Your Lifestlye</h1>
           <p className="w-full text-lg text-white lg:w-3/4 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+            Enhance your driving experience with tailored wraps that turn heads and protect your vehicle.
           </p>
         </div>
         <div className="z-0 flex w-full gap-6 lg:w-1/2">
