@@ -38,7 +38,7 @@ export default function Card(props: any) {
       >
         <div className="group relative h-full w-full overflow-hidden">
           <Image src={props.image} alt={props.title} className="h-full w-full rounded-md object-cover" />
-          <div className="absolute bottom-0 left-1/2 h-fit w-full -translate-x-1/2 translate-y-[4.5rem] rounded-b-md bg-gradient-to-t from-black to-transparent px-4 py-1 backdrop-blur-sm transition-all duration-300 ease-in-out group-hover:translate-y-0">
+          <div className="absolute bottom-0 left-1/2 py-2 h-fit w-full -translate-x-1/2 translate-y-[4.5rem] rounded-b-md bg-gradient-to-t from-black to-transparent px-4 py-1 backdrop-blur-sm transition-all duration-300 ease-in-out group-hover:translate-y-0">
             <h1 className="text-2xl font-bold text-white">{props.title}</h1>
             <p className="text-lg text-white">{props.description}</p>
           </div>

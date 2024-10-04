@@ -1,32 +1,39 @@
-import AlexWrap from '@/public/img/Alex_Tesla.jpg';
+'use client';
+import AboutUsImg from '@/public/img/gallery/AboutUs.jpg';
 import Image from 'next/image';
+import { scrollToSection } from '@/lib/utils';
 
 export default function AboutUs() {
   return (
-    <section id="about" className="flex min-h-screen w-screen flex-col items-center justify-center text-black">
+    <section id="about" className="flex h-fit w-screen flex-col items-center justify-center py-32 text-black">
       <div className="container flex flex-col gap-8 bg-[#f8f8ff] px-6 py-8 lg:flex-row lg:gap-16 lg:px-8">
         <div className="w-full lg:w-1/2">
           {/* <div className="aspect-square h-auto w-full rounded-xl bg-black" /> */}
           <Image
-            src={AlexWrap}
+            src={AboutUsImg}
             alt="Tesla Model S Matte Black"
-            className="aspect-square h-auto w-full rounded-xl border-4 border-black object-cover"
+            className="aspect-square h-auto w-full rounded-xl border-2 border-black object-cover"
           />
         </div>
         <div className="flex w-full flex-col gap-6 lg:w-1/2 lg:gap-12">
-          <h1 className="text-4xl font-bold">About Us</h1>
+          <h1 className="text-4xl font-bold">Phoenix&apos;s Trusted Vinyl Wrap Services </h1>
           <p className="text-xl font-light">
-            At 360 Auto Concepts, we specialize in delivering high-quality car wraps and automotive services with
-            precision and care. Based in Arizona, our skilled team is passionate about transforming vehicles with
-            top-tier vinyl wraps and ceramic coating packages. With 2 years of experience and a dedication to
-            perfection, we ensure that every project reflects our commitment to excellence. Whether you&apos;re looking
-            for a fresh new look or protection for your vehicle, 360 Auto Concepts has you covered.
+            Visit 360 Auto Concepts for top-tier vinyl wraps that will transform your vehicle with precision and style.
           </p>
+          <div className="h1:m-0 flex flex-col gap-4">
+            <h1 className="text-4xl font-bold">Free Wrap Consultation </h1>
+          </div>
           <p className="text-xl font-light">
-            Our team is dedicated to providing the best customer service and ensuring that every customer is satisfied
-            with the results. We use the latest technology and equipment to ensure that every project is completed to
-            the highest standards.
+            Not sure which vinyl wrap is right for your car? No worries. At 360 Auto Concepts, our team has a keen eye
+            for design and detail. Schedule a consultation, and we&apos;ll guide you through all your options, ensuring
+            you&apos;re thrilled with your choice.
           </p>
+          <button
+            className="w-fit rounded-full bg-black px-6 py-2 text-white"
+            onClick={() => scrollToSection('contact')}
+          >
+            Schedule A Visit
+          </button>
         </div>
       </div>
     </section>

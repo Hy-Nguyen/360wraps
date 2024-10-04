@@ -1,9 +1,9 @@
 import LayoutWrapper from '@/components/layout/LayoutWrapper';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const font = Manrope({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: '360 Auto Concepts',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + 'max-w-[100dvw] overflow-x-hidden bg-white lg:max-w-[100vw]'}>
+      <body className={font.className + 'max-w-[100dvw] overflow-x-hidden bg-white lg:max-w-[100vw]'}>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

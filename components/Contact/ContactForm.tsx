@@ -2,7 +2,7 @@
 
 import { MAX_MESSAGE_LENGTH } from '@/lib/constants';
 import { ContactFormData, contactFormSchema } from '@/lib/schema';
-import SampleFormImage from '@/public/img/samplewraps/wrap4.png';
+import Kevin from '@/public/img/gallery/Kevin.jpg';
 import { format, toZonedTime } from 'date-fns-tz';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -87,7 +87,7 @@ export default function ContactForm() {
         <p className="text-gray-500">We will get back to you as soon as possible.</p>
       </div>
       <div className="relative flex aspect-square w-full grow flex-col gap-4 overflow-hidden rounded-lg bg-black lg:w-1/2">
-        <Image src={SampleFormImage} alt="360 Auto Concepts" className="h-full w-full object-cover" />
+        <Image src={Kevin} alt="360 Auto Concepts" className="h-full w-full object-cover" />
         <div className="absolute bottom-0 left-0 flex h-fit w-full flex-col items-start justify-start bg-gradient-to-t from-black/75 to-transparent px-4 py-2 text-white backdrop-blur-sm">
           <h1 className="text-2xl font-bold">360 Auto Concepts</h1>
           <p className="text-gray-300">Available Monday - Friday - 10:00 AM - 6:00 PM</p>

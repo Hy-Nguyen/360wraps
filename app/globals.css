@@ -98,3 +98,10 @@ body {
     display: none; /* Chrome, Safari and Opera */
   }
 }
+
+.bg-hero {
+  background-image: url('/img/gallery/HeroSplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+}

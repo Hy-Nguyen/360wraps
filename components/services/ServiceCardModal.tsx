@@ -34,14 +34,14 @@ export default function ServiceCardModal({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="relative flex w-full flex-col-reverse items-start justify-start gap-6 rounded-lg bg-white p-8 lg:flex-row xl:max-w-[50dvw]">
+      <div className="relative flex w-full flex-col-reverse items-start justify-start gap-6 rounded-lg bg-white p-8 lg:flex-row xl:max-w-[65dvw]">
         <ModalCloseButton onClick={() => closeModal(id)} />
         <Image
           src={image}
           alt={title}
-          className="aspect-square w-full overflow-hidden rounded-md border border-gray-500 object-cover lg:w-1/2"
+          className="aspect-square w-full overflow-hidden rounded-md border border-gray-500 object-cover lg:w-3/5"
         />
-        <div className="flex w-full flex-col items-start justify-start gap-2 lg:w-1/2 lg:gap-4">
+        <div className="flex w-full flex-col items-start justify-start gap-2 lg:w-2/5 lg:gap-4">
           <h2 className="w-full text-center text-4xl font-bold lg:w-fit lg:pb-4 lg:text-start">{title}</h2>
           {longDescription.map((item, index) => (
             <p key={index} className="text-gray-600">

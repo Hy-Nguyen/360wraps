@@ -1,6 +1,12 @@
 'use client';
 import SampleImage from '@/public/img/samplewraps/wrap3.png';
 import ServiceCard from '../services/ServiceCard';
+import FullWrap from '@/public/img/gallery/FullWrap.jpg';
+import PartialWrap from '@/public/img/gallery/PartialWrap.jpg';
+import ChromeDelete from '@/public/img/gallery/DoorHandle.jpg';
+import CeramicCoating from '@/public/img/gallery/Ceramic.jpg';
+import Detailing from '@/public/img/gallery/Detailing.jpg';
+import Tinting from '@/public/img/gallery/Tinting.jpg';
 
 export default function Services() {
   const servicesOffered = [
@@ -13,7 +19,7 @@ export default function Services() {
         'Protects the original paint from scratches, UV rays, and other environmental damage.',
         'Easily removable, allowing you to revert to the original paint or change colors as desired.',
       ],
-      image: SampleImage,
+      image: FullWrap,
     },
     {
       title: 'Partial Wraps',
@@ -24,7 +30,7 @@ export default function Services() {
         'Cost-effective way to achieve a custom look without a full wrap.',
         'Available for hoods, roofs, mirrors, and other sections of your vehicle.',
       ],
-      image: SampleImage,
+      image: PartialWrap,
     },
     {
       title: 'Chrome Deletes',
@@ -35,7 +41,7 @@ export default function Services() {
         'Uses high-quality vinyl to cover chrome trims, emblems, and grilles.',
         'Enhances the overall aesthetic without permanent modifications.',
       ],
-      image: SampleImage,
+      image: ChromeDelete,
     },
     {
       title: 'Ceramic Coating',
@@ -46,7 +52,7 @@ export default function Services() {
         "Enhances the shine and depth of your vehicle's color.",
         'Reduces maintenance time and effort with its easy-to-clean properties.',
       ],
-      image: SampleImage,
+      image: CeramicCoating,
     },
     {
       title: 'Detailing',
@@ -57,7 +63,7 @@ export default function Services() {
         "Removes dirt, grime, and minor imperfections to restore your vehicle's original beauty.",
         'Tailored packages available to meet your specific needs and preferences.',
       ],
-      image: SampleImage,
+      image: Detailing,
     },
     {
       title: 'Tinting ',
@@ -68,7 +74,7 @@ export default function Services() {
         'Protects the interior from UV damage, reducing fading and cracking.',
         'Professionally installed to ensure a flawless, long-lasting finish.',
       ],
-      image: SampleImage,
+      image: Tinting,
     },
   ];
   return (

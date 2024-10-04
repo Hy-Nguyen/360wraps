@@ -1,27 +1,27 @@
-import Wrap1 from '@/public/img/samplewraps/wrap1.png';
-import Wrap2 from '@/public/img/samplewraps/wrap2.png';
-import Wrap3 from '@/public/img/samplewraps/wrap3.png';
-import Wrap4 from '@/public/img/samplewraps/wrap4.png';
+import Wrap1 from '@/public/img/gallery/Duo.jpg';
+import Wrap2 from '@/public/img/gallery/TeslaDuo.jpg';
+import Wrap3 from '@/public/img/gallery/Kevin.jpg';
+import Wrap4 from '@/public/img/gallery/Ceramic.jpg';
 
 export const galleryList = [
   {
     image: Wrap1,
-    title: 'Tesla Model S',
-    description: 'Cheetah Wraps - Abyss Black',
+    title: 'GT86 x Supra',
+    description: '',
   },
   {
     image: Wrap2,
-    title: 'Porsche 911',
-    description: 'Cheetah Wraps - Abyss Black',
+    title: 'Tesla Model S x Model 3',
+    description: '',
   },
   {
     image: Wrap3,
-    title: 'Mercedes-Benz C-Class',
-    description: 'Cheetah Wraps - Abyss Black',
+    title: 'Gt-86',
+    description: '',
   },
   {
     image: Wrap4,
-    title: 'Mercedes-Benz C-Class',
-    description: 'Cheetah Wraps - Abyss Black',
+    title: 'Supra',
+    description: '',
   },
 ];
