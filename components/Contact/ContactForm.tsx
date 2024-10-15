@@ -36,7 +36,9 @@ export default function ContactForm() {
     const mstTime = toZonedTime(now, 'America/Phoenix');
     const formattedTime = format(mstTime, "MMM dd, yyyy - hh:mm a 'MST'");
     setFormData((prev) => ({ ...prev, timeSent: formattedTime }));
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // console.log(formData);
+    // console.log(formattedTime);
+    // console.log(formData.timeSent);
     try {
       contactFormSchema.parse(formData);
       setErrors({});

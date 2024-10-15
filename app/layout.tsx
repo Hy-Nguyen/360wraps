@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className + 'max-w-[100dvw] overflow-x-hidden bg-white lg:max-w-[100vw]'}>
+      <body className={'font-satoshi max-w-[100dvw] overflow-x-hidden bg-white lg:max-w-[100vw]'}>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

@@ -105,3 +105,15 @@ body {
   background-position: center;
   background-attachment: local;
 }
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype-variations');
+  font-weight: 300 900;
+  font-style: normal;
+}
+@layer base {
+  body {
+    @apply font-satoshi bg-background text-foreground;
+  }
+}
